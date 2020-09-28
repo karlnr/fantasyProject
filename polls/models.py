@@ -26,7 +26,8 @@ class Question(models.Model):
     pub_date = models.DateTimeField('date published')  # optional first positional argument to a Field to designate a human-readable name
 
     def was_published_recently(self):
-        return self.pub_date >= timezone.now() - datetime.timedelta(days=1)
+        now = timezone.now()
+        return now - datetime.timedelta(days=1) <= self.pub_date <= now
 
 class Choice(models.Model):
     def __str__(self):
