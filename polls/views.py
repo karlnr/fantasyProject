@@ -136,6 +136,10 @@ class ResultsView(generic.DetailView):
     template_name = 'polls/results.html'
 
 
+'''
+Note that any of Django’s default admin templates can be overridden. To override a template, do the same 
+thing you did with base_site.html – copy it from the default directory into your custom directory, and make changes.
 
+'''
 
 
