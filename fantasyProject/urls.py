@@ -20,4 +20,5 @@ urlpatterns = [
     path('', include('polls.urls')),  # so that 'view site' works on admin page
     path('polls/', include('polls.urls')),  # add for polls app for /polls/ subaddressing
     path('admin/', admin.site.urls),
+    path('stats/', include('stats.urls')),  # add for polls app for /polls/ subaddressing
 ]
