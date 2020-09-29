@@ -1,13 +1,11 @@
 import datetime
-
 from django.test import TestCase
 from django.utils import timezone
-
+from django.urls import reverse
 from .models import Question
 
 
 class QuestionModelTests(TestCase):
-
     def test_was_published_recently_with_future_question(self):
         """
         was_published_recently() returns False for questions whose pub_date
@@ -36,9 +34,6 @@ class QuestionModelTests(TestCase):
         self.assertIs(recent_question.was_published_recently(), True)
 
 
-
-
-from django.urls import reverse
 def create_question(question_text, days):
     """
     Create a question with the given `question_text` and published the
