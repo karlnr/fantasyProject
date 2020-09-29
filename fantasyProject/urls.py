@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import include, path
 
 urlpatterns = [
+    path('', include('polls.urls')),  # so that 'view site' works on admin page
     path('polls/', include('polls.urls')),  # add for polls app for /polls/ subaddressing
     path('admin/', admin.site.urls),
 ]
